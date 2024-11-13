@@ -1,15 +1,17 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+node_modules/
+weather-app/node_modules/
+
+weather-app/.git
 
 # testing
 /coverage
 
 # production
-/build
+weather-app/build/
+weather-app/dist/
 
 # misc
 .DS_Store
@@ -21,3 +23,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
