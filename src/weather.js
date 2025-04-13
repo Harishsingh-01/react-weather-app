@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
+// Use environment variables
 const api = {
   key: process.env.REACT_APP_WEATHER_API_KEY,
-  base: process.env.REACT_APP_WEATHER_API_BASE
+  base: process.env.REACT_APP_WEATHER_API_BASE_URL
 };
 
 function Weather() {
@@ -11,7 +12,7 @@ function Weather() {
   const [forecast, setForecast] = useState({});
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const [defaultCity, setDefaultCity] = useState('London');
+  const [defaultCity, setDefaultCity] = useState(process.env.REACT_APP_DEFAULT_CITY || 'London');
   const [units, setUnits] = useState('metric'); // 'metric' or 'imperial'
 
   // Fetch weather data on component mount

@@ -1,3 +1,86 @@
+# Weather Forecast Application
+
+A modern React application that displays weather information for cities around the world.
+
+## Features
+
+- Real-time weather data from OpenWeatherMap API
+- 5-day weather forecast
+- Temperature unit toggle (Celsius/Fahrenheit)
+- Responsive design with modern UI
+- Dynamic backgrounds based on weather conditions
+- Animated elements and glassmorphism effects
+
+## Environment Variables
+
+This application uses environment variables to store sensitive information and configuration. To set up the environment variables:
+
+1. Create a `.env` file in the root directory of the project
+2. Add the following variables:
+
+```
+REACT_APP_WEATHER_API_KEY=your_api_key_here
+REACT_APP_WEATHER_API_BASE_URL=https://api.openweathermap.org/data/2.5/
+REACT_APP_DEFAULT_CITY=London
+```
+
+Replace `your_api_key_here` with your actual OpenWeatherMap API key.
+
+**Important**: The `.env` file is included in `.gitignore` and will not be committed to version control. This is to keep your API key secure.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+   or
+   ```
+   yarn install
+   ```
+3. Create a `.env` file as described above
+4. Start the development server:
+   ```
+   npm start
+   ```
+   or
+   ```
+   yarn start
+   ```
+
+## Deployment
+
+To build the application for production:
+
+```
+npm run build
+```
+
+or
+
+```
+yarn build
+```
+
+## Technologies Used
+
+- React
+- Tailwind CSS
+- OpenWeatherMap API
+- Environment Variables for configuration
+
+## License
+
+This project is licensed under the MIT License.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
