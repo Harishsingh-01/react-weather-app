@@ -12,12 +12,13 @@ function Weather() {
   const [forecast, setForecast] = useState({});
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const [defaultCity, setDefaultCity] = useState(process.env.REACT_APP_DEFAULT_CITY || 'London');
+  const defaultCity = process.env.REACT_APP_DEFAULT_CITY || 'London';
   const [units, setUnits] = useState('metric'); // 'metric' or 'imperial'
 
   // Fetch weather data on component mount
   useEffect(() => {
     search(defaultCity);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Fetch weather data
